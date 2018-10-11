@@ -1,0 +1,81 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>springmvc.hand</groupId>
+  <artifactId>springmvc-hand</artifactId>
+  <packaging>war</packaging>
+  <version>0.0.1-SNAPSHOT</version>
+  <name>springmvc-hand Maven Webapp</name>
+  <url>http://maven.apache.org</url>
+  
+  <!-- begin 公司nexus地址，可以删除这段 -->
+  <repositories>
+		<repository>
+			<id>local-nexus</id>
+			<name>nexus respository</name>
+			<url>http://192.168.1.60:8081/nexus/content/groups/public/</url>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</repository>
+
+		<repository>
+			<id>central</id>
+			<name>central</name>
+			<url>http://repo1.maven.org/maven2/</url>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</repository>
+	</repositories>
+
+	<pluginRepositories>
+		<pluginRepository>
+			<id>nexus-plugin</id>
+			<name>nexus plugin respository</name>
+			<url>http://192.168.1.60:8081/nexus/content/groups/public/</url>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</pluginRepository>
+	</pluginRepositories>
+
+	<distributionManagement>
+		<repository>
+			<id>releases</id>
+			<name>Nexus Release Repository</name>
+			<url>http://192.168.1.60:8081/nexus/content/groups/public/</url>
+		</repository>
+		<snapshotRepository>
+			<id>snapshots</id>
+			<name>Nexus Snapshot Repository</name>
+			<url>http://192.168.1.60:8081/nexus/content/groups/public/</url>
+		</snapshotRepository>
+	</distributionManagement>
+	<!-- end 公司nexus地址，可以删除这段 -->
+	
+  <properties>
+   <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+   <maven.compiler.source>1.7</maven.compiler.source>
+   <maven.compiler.target>1.7</maven.compiler.target>
+   <java.version>1.7</java.version>
+ </properties>
+ 
+  <dependencies>
+      <dependency>
+        <groupId>javax.servlet</groupId> 
+      <artifactId>javax.servlet-api</artifactId> 
+      <version>3.0.1</version> 
+      <scope>provided</scope>
+   </dependency>
+   </dependencies>
+  <build>
+    <finalName>springmvc-hand</finalName>
+  </build>
+</project>
